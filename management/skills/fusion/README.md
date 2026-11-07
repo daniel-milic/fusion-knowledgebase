@@ -9,4 +9,4 @@ Skills focused on the Fusion test automation platform and its relationship to th
 - Identify gaps in coverage by comparing platform functionality to existing scenarios/tasks
 - Prepare structured extracts that Copilot can use when updating automation scripts
 
-These skills rely on the retrieval scripts in `scripts/fusion/`.
+These skills rely on the retrieval scripts in `management/scripts/fusion/`.

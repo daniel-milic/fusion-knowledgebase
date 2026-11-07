@@ -11,7 +11,7 @@ Python scripts that pull knowledge from Fusion (MongoDB scenarios, tasks, datase
 
 ## Structure
 ```
-scripts/
+management/scripts/
 ├── README.md
 ├── fusion/          # Fusion MongoDB queries and extractors
 ├── platforms/       # Helpers that relate scenarios to platform pages/APIs
