@@ -12,12 +12,13 @@ Actual results belong to a test run and are held on the run's `run_status` docum
 ## Statuses
 | Level | Values |
 |---|---|
-| Checkpoint | `FAIL`, `PASS`, `ALERT`, `BASELINE` |
+| Checkpoint | `FAIL`, `PASS`, `ALERT`, `BASELINE`, `TBT` |
 | Task | `queued`, `allocated`, `executing`, `stopped`, `completed` |
-| Scenario | `FAIL`, `PASS`, `BLOCKED`, `ALERT`, `BASELINE` (and `TBT`, see below) |
+| Scenario | `FAIL`, `PASS`, `BLOCKED`, `ALERT`, `BASELINE` |
 
 - `BASELINE`: no expected value exists yet; the actual value is shown in Fusion web for a tester decision.
 - `ALERT`: the value or image does not match the baseline's expected data or image; needs review.
+- `TBT`: a checkpoint status that has no result yet (meaning to be confirmed; see To document).
 
 ### Scenario status
 The scenario status in the `run_status` document for that `sid` is determined by the sum of all checkpoints across all tasks in the scenario. Where checkpoints disagree, the scenario takes the first of these that applies:
@@ -72,6 +73,6 @@ Baseline images are stored in an Azure file share.
 - Exact field names in the `baseline` and `run_status` documents (sample documents to come)
 - What a tester's pass/fail decision on an Alert changes (the baseline, or only that run)
 - Where the flag is set for checkpoints whose value is text, a regex or a datastore reference
-- What `TBT` means, and when a scenario has it
+- What `TBT` means exactly, and when a checkpoint has it
 - Confirm that a `Blocked`-flag mismatch gives checkpoint status `FAIL` (there is no `BLOCKED` checkpoint status)
 - Confirm the scenario status order above reads highest priority first
