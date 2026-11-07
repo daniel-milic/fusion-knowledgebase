@@ -6,9 +6,9 @@ Fusion is the test automation platform. Test scenarios are stored in its MongoDB
 ```
 Test Scenario (Fusion / MongoDB)
         ↓
-Test Automation Task (contains Dataset)
+Test Automation Task (holds its own test data)
         ↓
-Python script(s) in fusion-scripts
+Python script in fusion-scripts
         ↓
 Target platform page / wizard / API / flow
 ```
@@ -17,14 +17,13 @@ Target platform page / wizard / API / flow
 | Concept | Storage / location | Description |
 |---|---|---|
 | Test scenario | Fusion MongoDB | High-level end-to-end scenario |
-| Test automation task | Fusion | Executable unit containing a dataset |
-| Dataset | Within task | Test data |
+| Test automation task | Fusion | Executable unit; contains its test data |
 | Python script | fusion-scripts repo | Interacts with a page or API |
 | Custom Python framework | fusion-scripts repo | Shared patterns and helpers |
 
 ## Files in this folder
 - [scenarios.md](scenarios.md) — scenario summaries
-- [tasks-and-datasets.md](tasks-and-datasets.md) — tasks and their data
+- [tasks.md](tasks.md) — tasks and the data they hold
 - [database.md](database.md) — collections, fields, relationships
 - [user-interactions.md](user-interactions.md) — creating scenarios, test runs, tasks
 - [scripts-repo.md](scripts-repo.md) — fusion-scripts structure and patterns

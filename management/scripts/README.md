@@ -1,9 +1,9 @@
 # Knowledge Retrieval Scripts
 
-Python scripts that pull knowledge from Fusion (MongoDB scenarios, tasks, datasets) and other sources to keep this knowledge base current and to support AI-assisted maintenance of the `fusion-scripts` repository.
+Python scripts that pull knowledge from Fusion (MongoDB scenarios and tasks) and other sources to keep this knowledge base current and to support AI-assisted maintenance of the `fusion-scripts` repository.
 
 ## Intended Capabilities
-- Query Fusion for scenarios, tasks, and their datasets/parameters
+- Query Fusion for scenarios and tasks, including their data
 - Map tasks to underlying Python scripts in the automation codebase
 - Extract platform/page/API coverage
 - Generate or update documentation stubs

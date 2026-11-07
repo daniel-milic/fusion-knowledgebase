@@ -21,8 +21,8 @@ All have test automation coverage.
 - AdviceOS
 - Quadient letter generation
 
-## enterprise-services
-- Boomi (centralised APIs) — [platforms/enterprise-services/](platforms/enterprise-services/)
+## integration
+- Boomi (centralised APIs) — [platforms/integration/](platforms/integration/)
 
 ## data-ai
 No automation coverage.

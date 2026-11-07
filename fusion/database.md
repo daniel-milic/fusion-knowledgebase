@@ -6,7 +6,7 @@
 | | | |
 
 ## Relationships
-- Scenario → task → dataset → script
+- Scenario → task → script
 
 ## Execution results
 - Run records and evidence used for healing

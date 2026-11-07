@@ -8,7 +8,7 @@ Scripts sit under `regression/<domain>/<platform>/<page>`, matching the domain a
 ## Framework patterns
 - Page object / component patterns
 - API client patterns (Sonata, Experience Layer, Boomi)
-- Dataset consumption
+- Reading task data
 - Test data builders
 - Assertions and verification helpers
 - Logging, reporting, and evidence capture
@@ -16,4 +16,4 @@ Scripts sit under `regression/<domain>/<platform>/<page>`, matching the domain a
 - Common utilities (dates, superannuation calculations, identifiers)
 - Naming conventions and task linkage
 
-> Goal: an AI reading this repo can generate a new script that matches existing patterns and links correctly to a task and dataset.
+> Goal: an AI reading this repo can generate a new script that matches existing patterns and links correctly to a task.

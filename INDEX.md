@@ -6,7 +6,7 @@ Entry point for AI navigation. Find the row that matches the request, open that 
 |---|---|
 | Which platforms exist and which domain they sit in | [PLATFORMS.md](PLATFORMS.md) |
 | A test scenario: what it covers, its steps, its platforms | [fusion/scenarios.md](fusion/scenarios.md) |
-| Tasks, datasets, test data | [fusion/tasks-and-datasets.md](fusion/tasks-and-datasets.md) |
+| Tasks and their test data | [fusion/tasks.md](fusion/tasks.md) |
 | MongoDB collections, fields, relationships | [fusion/database.md](fusion/database.md) |
 | How users create scenarios, test runs, tasks | [fusion/user-interactions.md](fusion/user-interactions.md) |
 | Fusion overview and high-level flow | [fusion/README.md](fusion/README.md) |
@@ -18,7 +18,7 @@ Entry point for AI navigation. Find the row that matches the request, open that 
 ## Domains
 - [platforms/digital/](platforms/digital/) — member-facing platforms
 - [platforms/advice-admin/](platforms/advice-admin/) — registry, CRM, advice, letters
-- [platforms/enterprise-services/](platforms/enterprise-services/) — Boomi and shared services
+- [platforms/integration/](platforms/integration/) — Boomi and shared integration
 - [platforms/data-ai/](platforms/data-ai/) — data and AI platforms (no automation coverage yet)
 
 ## Routing rule

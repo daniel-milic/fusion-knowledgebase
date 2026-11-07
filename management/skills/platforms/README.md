@@ -9,4 +9,4 @@ Skills for capturing and maintaining knowledge about enterprise platforms.
 - Record data dependencies and timing expectations for a given page or API
 - Identify which Fusion scenarios / tasks currently cover a platform area
 
-Outputs from these skills live primarily under `platforms/` (`digital/`, `advice-admin/`, `enterprise-services/`).
+Outputs from these skills live primarily under `platforms/` (`digital/`, `advice-admin/`, `integration/`).
