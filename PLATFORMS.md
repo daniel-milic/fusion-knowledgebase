@@ -27,8 +27,8 @@ TEST01, TEST02, TEST03, TEST04, DEV01, DEV04, PPD01, PPD02
 |---|---|
 | Sonata Registry and APIs — [platforms/advice-admin/sonata/](platforms/advice-admin/sonata/) | Bravura product. Central registry |
 | Sonata ODS DB | Operational data store |
-| eCRM | Clients, mostly advisor-facing |
-| AdviceOS | Bravura product. Financial advice |
+| eCRM — [platforms/advice-admin/ecrm/](platforms/advice-admin/ecrm/) | Clients, mostly advisor-facing |
+| AdviceOS — [platforms/advice-admin/adviceos/](platforms/advice-admin/adviceos/) | Bravura product. Financial advice |
 | Zendesk | Service desk |
 | Quadient | Letter generation |
 
