@@ -1,48 +1,35 @@
-# Platforms Overview
+# Platforms
 
-High-level view of enterprise platforms and integration paths. Detailed page/wizard/API documentation lives under `platforms/`.
+One list of platforms by domain. Platform detail lives in `<domain>/<platform>/`. Only platforms with a folder are linked.
 
-## Domains
-
-### Data and AI
-| Platform / Area | Type | Test Automation Coverage |
-|-----------------|------|---------------------------|
-| Data platforms  | Internal | None |
-| AI / ML services| Internal | None |
-
-### Digital (Member-Facing)
+## digital (member-facing)
 All have test automation coverage.
+- Member Portal — [digital/member-portal/](digital/member-portal/)
+- Advisor Portal
+- Employer Portal
+- TAL Insurance
+- Public Web
+- Mobile App
+- Microsites Web
+- Experience Layer APIs
 
-| Platform              | Type          | Primary Users     |
-|-----------------------|---------------|-------------------|
-| Member Portal         | Web           | Members           |
-| Advisor Portal        | Web           | Advisors          |
-| Employer Portal       | Web           | Employers         |
-| TAL Insurance         | Web / Integration | Members / Advisors |
-| Public Web            | Web           | Public / Prospects|
-| Mobile App            | Mobile        | Members           |
-| Microsites Web        | Web           | Various           |
-| Experience Layer APIs | API           | Digital channels  |
+## advice-admin
+- Sonata Registry and APIs — [advice-admin/sonata/](advice-admin/sonata/)
+- Sonata ODS DB
+- eCRM
+- Zendesk
+- AdviceOS
+- Quadient letter generation
 
-### Advice & Admin
-| Platform                  | Type          | Primary Use                  |
-|---------------------------|---------------|------------------------------|
-| Sonata Registry           | Core Registry | Member accounts, products    |
-| Sonata ODS DB             | Database      | Operational data store       |
-| Sonata APIs               | API           | Registry operations          |
-| eCRM                      | CRM           | Customer relationship        |
-| Zendesk                   | Service Desk  | Member / advisor support     |
-| AdviceOS                  | Advice system | Financial advice             |
-| Quadient Letter generation| Document      | Letters, statements          |
+## enterprise-services
+- Boomi (centralised APIs) — [enterprise-services/](enterprise-services/)
 
-### Enterprise Services
-| Platform / Component     | Type | Notes |
-|--------------------------|------|-------|
-| Boomi (centralised APIs) | Integration / APIs | Used by all platforms |
+## data-ai
+No automation coverage.
+- Data platforms
+- AI / ML services
 
-## Integration Paths
-- Digital channels → Experience Layer APIs → Boomi → Sonata Registry / other back-office systems
+## Integration paths
+- Digital channels → Experience Layer APIs → Boomi → Sonata Registry and other back-office systems
 - Advice calculators may surface in member-facing channels
-- Letter generation (Quadient) triggered from multiple platforms
-
-Detailed documentation: see [platforms/](platforms/).
+- Letter generation (Quadient) is triggered from multiple platforms
