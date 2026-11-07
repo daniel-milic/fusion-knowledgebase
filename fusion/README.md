@@ -20,7 +20,7 @@ Target platform page / wizard / API / flow
 | Test automation task | Fusion MongoDB (`task_def`) | Executable unit; holds its test data, actions and checkpoints |
 | Checkpoint | Within task | Verifies a result; type data or image |
 | Test run | Fusion MongoDB (`test_runs`, `run_status`) | A selection of scenarios and their tasks |
-| Baseline | Fusion MongoDB (`baseline`); images in Azure file share | Expected result per scenario, task and checkpoint |
+| Baseline | Fusion MongoDB (`baseline`); images in Azure file share | One document per scenario holding each checkpoint's expected result |
 | Python script | fusion-scripts repo | Interacts with a page or API |
 | Custom Python framework | fusion-scripts repo | Shared patterns and helpers |
 
