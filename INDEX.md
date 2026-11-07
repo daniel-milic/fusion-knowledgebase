@@ -7,7 +7,7 @@ Entry point for AI navigation. Find the row that matches the request, open that 
 | Which platforms exist, by domain | [PLATFORMS.md](PLATFORMS.md) |
 | A test scenario: what it covers and which platforms it touches | [fusion/scenarios/README.md](fusion/scenarios/README.md) |
 | Tasks and their test data | [fusion/tasks.md](fusion/tasks.md) |
-| Checkpoints, baselines, pass/fail logic | [fusion/checkpoints-and-baselines.md](fusion/checkpoints-and-baselines.md) |
+| Checkpoints, baselines, Alerts, pass/fail logic | [fusion/checkpoints-and-baselines.md](fusion/checkpoints-and-baselines.md) |
 | MongoDB collections, fields, relationships | [fusion/database.md](fusion/database.md) |
 | How users create scenarios, test runs, tasks | [fusion/user-interactions.md](fusion/user-interactions.md) |
 | Fusion overview and high-level flow | [fusion/README.md](fusion/README.md) |

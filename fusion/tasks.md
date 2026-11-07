@@ -15,5 +15,5 @@ Verification is often in the same task that performs the action.
 - **Checkpoints** to verify data on web pages, Sonata pages, or API responses (see [checkpoints-and-baselines.md](checkpoints-and-baselines.md))
 
 ## To document
-- Task fields in Fusion and how a task links to its script
+- Task fields in `task_def` and how a task links to its script
 - Environment differences (SIT / UAT)
