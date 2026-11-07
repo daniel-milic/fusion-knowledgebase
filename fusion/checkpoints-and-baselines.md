@@ -26,9 +26,9 @@ The scenario status in the `run_status` document for that `sid` is determined by
 `ALERT` → `BASELINE` → `BLOCKED` → `FAIL` → `TBT` → `PASS`
 
 ## Flags
-Every checkpoint has a flag, `Fail` or `Blocked`. It decides what a mismatch does:
+`Fail` and `Blocked` are flags, not statuses. Every checkpoint has one. A checkpoint that does not match is set to status `FAIL`; the flag decides what that does to the task and scenario:
 
-| Flag | On mismatch |
+| Flag | Effect of a mismatch |
 |---|---|
 | `Fail` | Scenario status is `FAIL`. The scenario continues until all tasks are complete |
 | `Blocked` | Scenario status is `BLOCKED`. The task is set to `stopped` and the scenario does not continue |
@@ -40,7 +40,7 @@ The value set on a checkpoint in a task decides how it is checked:
 
 | Value | Check |
 |---|---|
-| `Fail` or `Blocked` | The flag, and a signal to look up the `baseline` for the expected value (see below) |
+| `Fail` or `Blocked` | A flag, not a status. Also a signal to look up the `baseline` for the expected value (see below) |
 | Any other text | The actual result is compared with that text |
 | A regular expression | The actual result is matched against it |
 | A datastore reference, e.g. `#acc1` | The actual result is compared with the value saved under that reference (see [datastore.md](datastore.md)) |
@@ -74,5 +74,4 @@ Baseline images are stored in an Azure file share.
 - What a tester's pass/fail decision on an Alert changes (the baseline, or only that run)
 - Where the flag is set for checkpoints whose value is text, a regex or a datastore reference
 - What `TBT` means exactly, and when a checkpoint has it
-- Confirm that a `Blocked`-flag mismatch gives checkpoint status `FAIL` (there is no `BLOCKED` checkpoint status)
 - Confirm the scenario status order above reads highest priority first
