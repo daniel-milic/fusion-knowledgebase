@@ -1,12 +1,12 @@
-# Rizon — Enterprise Superannuation Test Automation Knowledge Base
+# fusion-knowledgebase
 
-**Project:** Rizon  
-**Purpose:** Self-documenting AI harness and knowledge base that provides deep insight into the enterprise tech stack (platforms, functionality, datasets, timings, integrations) and the Fusion test automation platform that validates it.
+**Repository:** [daniel-milic/fusion-knowledgebase](https://github.com/daniel-milic/fusion-knowledgebase)  
+**Purpose:** Self-documenting AI harness and knowledge base for the enterprise Superannuation tech stack (platforms, functionality, datasets, timings, integrations) and the Fusion test automation platform that validates it.
 
 Enables AI to understand complex superannuation processes, map end-to-end regression coverage, develop and heal scripts, and maintain a unified view of both enterprise platforms and their corresponding test automation.
 
-> **About Rizon:**  
-> Rizon enables AI to deeply understand the enterprise tech stack alongside the test automation platform.  
+> **About this knowledge base:**  
+> This repository provides deep insight into the enterprise platforms alongside the Fusion test automation platform.  
 > It is the foundation of a self-documenting AI harness that builds structured knowledge and develops the scripts needed to sew end-to-end test automation across complex superannuation processes.
 
 ## Navigation
