@@ -22,7 +22,7 @@ Target platform page / wizard / API / flow
 | Custom Python framework | fusion-scripts repo | Shared patterns and helpers |
 
 ## Files in this folder
-- [scenarios.md](scenarios.md) — scenario summaries
+- [scenarios/](scenarios/) — scenario index and one file per scenario
 - [tasks.md](tasks.md) — tasks and the data they hold
 - [database.md](database.md) — collections, fields, relationships
 - [user-interactions.md](user-interactions.md) — creating scenarios, test runs, tasks

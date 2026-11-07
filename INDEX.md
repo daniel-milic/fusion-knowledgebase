@@ -4,8 +4,8 @@ Entry point for AI navigation. Find the row that matches the request, open that 
 
 | If the request is about... | Open |
 |---|---|
-| Which platforms exist and which domain they sit in | [PLATFORMS.md](PLATFORMS.md) |
-| A test scenario: what it covers, its steps, its platforms | [fusion/scenarios.md](fusion/scenarios.md) |
+| Which platforms exist, by domain | [PLATFORMS.md](PLATFORMS.md) |
+| A test scenario: what it covers and which platforms it touches | [fusion/scenarios/README.md](fusion/scenarios/README.md) |
 | Tasks and their test data | [fusion/tasks.md](fusion/tasks.md) |
 | MongoDB collections, fields, relationships | [fusion/database.md](fusion/database.md) |
 | How users create scenarios, test runs, tasks | [fusion/user-interactions.md](fusion/user-interactions.md) |
@@ -13,13 +13,7 @@ Entry point for AI navigation. Find the row that matches the request, open that 
 | The fusion-scripts repo: layout, patterns, where a script goes | [fusion/scripts-repo.md](fusion/scripts-repo.md) |
 | A platform (business rules, timings, integrations) | `platforms/<domain>/<platform>/README.md` |
 | A page, wizard or API on a platform | `platforms/<domain>/<platform>/<page>.md` |
-| This knowledge base: skills, layout, depth, collection scripts | [management/README.md](management/README.md) |
-
-## Domains
-- [platforms/digital/](platforms/digital/) — member-facing platforms
-- [platforms/advice-admin/](platforms/advice-admin/) — registry, CRM, advice, letters
-- [platforms/integration/](platforms/integration/) — Boomi and shared integration
-- [platforms/data-ai/](platforms/data-ai/) — data and AI platforms (no automation coverage yet)
+| This knowledge base: layout, depth, size rules, skills, collection scripts | [management/README.md](management/README.md) |
 
 ## Routing rule
 1. Read this file.

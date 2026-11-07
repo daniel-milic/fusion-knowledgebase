@@ -1,9 +1,8 @@
 # Platforms
 
-One list of platforms by domain. Platform detail lives in `platforms/<domain>/<platform>/`. Only platforms with a folder are linked.
+The single list of platforms. Detail lives in `platforms/<domain>/<platform>/`. Only platforms with a folder are linked; add the link when the folder is created.
 
-## digital (member-facing)
-All have test automation coverage.
+## digital — member-facing, all with automation coverage
 - Member Portal — [platforms/digital/member-portal/](platforms/digital/member-portal/)
 - Advisor Portal
 - Employer Portal
@@ -13,7 +12,7 @@ All have test automation coverage.
 - Microsites Web
 - Experience Layer APIs
 
-## advice-admin
+## advice-admin — mostly internal, some member-facing calculators
 - Sonata Registry and APIs — [platforms/advice-admin/sonata/](platforms/advice-admin/sonata/)
 - Sonata ODS DB
 - eCRM
@@ -21,11 +20,10 @@ All have test automation coverage.
 - AdviceOS
 - Quadient letter generation
 
-## integration
-- Boomi (centralised APIs) — [platforms/integration/](platforms/integration/)
+## integration — shared layer used by all platforms
+- Boomi (centralised APIs)
 
-## data-ai
-No automation coverage.
+## data-ai — no automation coverage
 - Data platforms
 - AI / ML services
 
