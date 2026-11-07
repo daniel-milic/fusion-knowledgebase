@@ -3,7 +3,7 @@
 **Repository:** [daniel-milic/fusion-knowledgebase](https://github.com/daniel-milic/fusion-knowledgebase)  
 **Purpose:** Self-documenting AI harness and knowledge base for the enterprise Superannuation tech stack (platforms, functionality, datasets, timings, integrations) and the Fusion test automation platform that validates it.
 
-Enables AI to understand complex superannuation processes, map end-to-end regression coverage, develop and heal scripts, and maintain a unified view of both enterprise platforms and their corresponding test automation.
+Enables AI (especially GitHub Copilot) to understand complex superannuation processes, map end-to-end regression coverage, develop and heal scripts, and maintain a unified view of both enterprise platforms and their corresponding test automation in the `fusion-scripts` repository.
 
 > **About this knowledge base:**  
 > This repository provides deep insight into the enterprise platforms alongside the Fusion test automation platform.  
@@ -15,6 +15,8 @@ Enables AI to understand complex superannuation processes, map end-to-end regres
 - [FUSION.md](FUSION.md) — Test automation platform (scenarios, tasks, datasets, MongoDB)
 - [FRAMEWORK.md](FRAMEWORK.md) — Custom Python framework patterns
 - [platforms/](platforms/) — Detailed platform documentation (pages, wizards, APIs, flows)
+- [scripts/](scripts/) — Python scripts to retrieve and assemble knowledge from Fusion and other sources
+- [skills/](skills/) — AI skills for documenting superannuation knowledge and maintaining automation
 
 ## Enterprise Context
 
