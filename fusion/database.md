@@ -15,15 +15,15 @@ Created for each scenario selected when a test run is created.
 - Tasks list, with each task's datasets, ordered
 - Datastore dict: runtime values saved as `#reference = value` (see [datastore.md](datastore.md))
 - Checkpoints dict: for each checkpoint (by `tid` and name), value and status. A value of `Fail` or `Blocked` is the flag and means look up the baseline
-- Task status (a task is set to `stopped` when a `Blocked` checkpoint fails)
-- Scenario status for that `sid`, determined by the sum of all checkpoints across all tasks (`FAIL`, `BLOCKED`; see [checkpoints-and-baselines.md](checkpoints-and-baselines.md))
+- Task status: `queued`, `allocated`, `executing`, `stopped`, `completed` (a task is set to `stopped` when a `Blocked` checkpoint fails)
+- Scenario status for that `sid`, determined by the sum of all checkpoints across all tasks (see [checkpoints-and-baselines.md](checkpoints-and-baselines.md))
 
 The checkpoint values and statuses in `run_status` are the run's actual results. They are compared with `baseline`.
 
 ## baseline document
 One per scenario, found by `sid`. A separate collection for now; planned to move into the scenario document.
 - `checkpoints / <tid> / <checkpoint name> / expected` — the expected result
-- status — pass or fail, as decided by a tester
+- status — `PASS` or `FAIL`, as decided by a tester
 
 ## Relationships
 - Scenario → task → script
