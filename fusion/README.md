@@ -18,6 +18,7 @@ Target platform page / wizard / API / flow
 |---|---|---|
 | Test scenario | Fusion MongoDB (`scenarios`) | Usually an end-to-end test; a sequence of tasks |
 | Test automation task | Fusion MongoDB (`task_def`) | Executable unit; holds its test data, actions and checkpoints |
+| Datastore | `run_status` document | Runtime values shared between a scenario's tasks, referenced as `#name` |
 | Checkpoint | Within task | Verifies a result; type data or image |
 | Test run | Fusion MongoDB (`test_runs`, `run_status`) | A selection of scenarios and their tasks |
 | Baseline | Fusion MongoDB (`baseline`); images in Azure file share | One document per scenario holding each checkpoint's expected result |
@@ -27,6 +28,7 @@ Target platform page / wizard / API / flow
 ## Files in this folder
 - [scenarios/](scenarios/) — scenario index and one file per scenario
 - [tasks.md](tasks.md) — tasks and the data they hold
+- [datastore.md](datastore.md) — runtime values shared between tasks in a scenario
 - [checkpoints-and-baselines.md](checkpoints-and-baselines.md) — verifying results and baselining
 - [database.md](database.md) — collections, fields, relationships
 - [user-interactions.md](user-interactions.md) — creating scenarios, test runs, tasks

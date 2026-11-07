@@ -7,6 +7,7 @@ Entry point for AI navigation. Find the row that matches the request, open that 
 | Which platforms exist, by domain | [PLATFORMS.md](PLATFORMS.md) |
 | A test scenario: what it covers and which platforms it touches | [fusion/scenarios/README.md](fusion/scenarios/README.md) |
 | Tasks and their test data | [fusion/tasks.md](fusion/tasks.md) |
+| Datastore (`#` references, values shared between tasks) | [fusion/datastore.md](fusion/datastore.md) |
 | Checkpoints, baselines, Alerts, pass/fail logic | [fusion/checkpoints-and-baselines.md](fusion/checkpoints-and-baselines.md) |
 | MongoDB collections, fields, relationships | [fusion/database.md](fusion/database.md) |
 | How users create scenarios, test runs, tasks | [fusion/user-interactions.md](fusion/user-interactions.md) |
