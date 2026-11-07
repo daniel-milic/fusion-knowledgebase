@@ -1,8 +1,19 @@
 # Tasks
 
-A task is the executable unit. It holds its own test data (dataset) and links to a script in fusion-scripts.
+A task is the executable unit of a scenario. It holds its own test data and links to a script in fusion-scripts.
 
-- Fields and meaning
-- Dataset fields (held inside the task)
-- How the task links to a script
+## What a task does
+Any combination of:
+- **Test data:** create the conditions the scenario needs
+- **Actions:** perform the steps
+- **Verify outcome:** check results
+
+Verification is often in the same task that performs the action.
+
+## What a task contains
+- **Fields and values** to input into a web page, a Sonata page, or an API
+- **Checkpoints** to verify data on web pages, Sonata pages, or API responses (see [checkpoints-and-baselines.md](checkpoints-and-baselines.md))
+
+## To document
+- Task fields in Fusion and how a task links to its script
 - Environment differences (SIT / UAT)
