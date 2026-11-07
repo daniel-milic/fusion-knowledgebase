@@ -1,10 +1,10 @@
 # Platforms
 
-One list of platforms by domain. Platform detail lives in `<domain>/<platform>/`. Only platforms with a folder are linked.
+One list of platforms by domain. Platform detail lives in `platforms/<domain>/<platform>/`. Only platforms with a folder are linked.
 
 ## digital (member-facing)
 All have test automation coverage.
-- Member Portal — [digital/member-portal/](digital/member-portal/)
+- Member Portal — [platforms/digital/member-portal/](platforms/digital/member-portal/)
 - Advisor Portal
 - Employer Portal
 - TAL Insurance
@@ -14,7 +14,7 @@ All have test automation coverage.
 - Experience Layer APIs
 
 ## advice-admin
-- Sonata Registry and APIs — [advice-admin/sonata/](advice-admin/sonata/)
+- Sonata Registry and APIs — [platforms/advice-admin/sonata/](platforms/advice-admin/sonata/)
 - Sonata ODS DB
 - eCRM
 - Zendesk
@@ -22,7 +22,7 @@ All have test automation coverage.
 - Quadient letter generation
 
 ## enterprise-services
-- Boomi (centralised APIs) — [enterprise-services/](enterprise-services/)
+- Boomi (centralised APIs) — [platforms/enterprise-services/](platforms/enterprise-services/)
 
 ## data-ai
 No automation coverage.

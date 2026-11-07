@@ -11,15 +11,15 @@ Entry point for AI navigation. Find the row that matches the request, open that 
 | How users create scenarios, test runs, tasks | [fusion/user-interactions.md](fusion/user-interactions.md) |
 | Fusion overview and high-level flow | [fusion/README.md](fusion/README.md) |
 | The fusion-scripts repo: layout, patterns, where a script goes | [fusion/scripts-repo.md](fusion/scripts-repo.md) |
-| A platform (business rules, timings, integrations) | `<domain>/<platform>/README.md` |
-| A page, wizard or API on a platform | `<domain>/<platform>/<page>.md` |
+| A platform (business rules, timings, integrations) | `platforms/<domain>/<platform>/README.md` |
+| A page, wizard or API on a platform | `platforms/<domain>/<platform>/<page>.md` |
 | This knowledge base: skills, layout, depth, collection scripts | [management/README.md](management/README.md) |
 
 ## Domains
-- [digital/](digital/) — member-facing platforms
-- [advice-admin/](advice-admin/) — registry, CRM, advice, letters
-- [enterprise-services/](enterprise-services/) — Boomi and shared services
-- [data-ai/](data-ai/) — data and AI platforms (no automation coverage yet)
+- [platforms/digital/](platforms/digital/) — member-facing platforms
+- [platforms/advice-admin/](platforms/advice-admin/) — registry, CRM, advice, letters
+- [platforms/enterprise-services/](platforms/enterprise-services/) — Boomi and shared services
+- [platforms/data-ai/](platforms/data-ai/) — data and AI platforms (no automation coverage yet)
 
 ## Routing rule
 1. Read this file.
