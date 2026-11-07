@@ -14,7 +14,9 @@ Created for each scenario selected when a test run is created.
 - Scenario fields
 - Tasks list, with each task's datasets, ordered
 - Datastore dict: runtime values saved as `#reference = value` (see [datastore.md](datastore.md))
-- Checkpoints dict: for each checkpoint (by `tid` and name), value and status. A value of `Fail` or `Blocked` means look up the baseline
+- Checkpoints dict: for each checkpoint (by `tid` and name), value and status. A value of `Fail` or `Blocked` is the flag and means look up the baseline
+- Task status (a task is set to `stopped` when a `Blocked` checkpoint fails)
+- Scenario status for that `sid`, determined by the sum of all checkpoints across all tasks (`FAIL`, `BLOCKED`; see [checkpoints-and-baselines.md](checkpoints-and-baselines.md))
 
 The checkpoint values and statuses in `run_status` are the run's actual results. They are compared with `baseline`.
 

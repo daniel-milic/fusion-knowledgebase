@@ -9,6 +9,8 @@ A scenario is a sequence of tasks:
 
 See [../tasks.md](../tasks.md); each task can create data, act, and verify.
 
+A scenario's status is the sum of all its checkpoints across all tasks. A `FAIL` scenario runs to the end; a `BLOCKED` scenario stops (see [../checkpoints-and-baselines.md](../checkpoints-and-baselines.md)).
+
 ## Index
 One line per scenario. Each scenario has its own file, `<scenario-id>.md`, in this folder, based on `management/templates/scenario.md`.
 
