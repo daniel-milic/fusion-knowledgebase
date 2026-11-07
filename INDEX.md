@@ -6,9 +6,11 @@ Entry point for AI navigation. Find the row that matches the request, open that 
 |---|---|
 | Which platforms exist, by domain | [PLATFORMS.md](PLATFORMS.md) |
 | A test scenario: what it covers and which platforms it touches | [fusion/scenarios/README.md](fusion/scenarios/README.md) |
-| Tasks and their test data | [fusion/tasks.md](fusion/tasks.md) |
-| Datastore (`#` references, values shared between tasks) | [fusion/datastore.md](fusion/datastore.md) |
-| Checkpoints, baselines, Alerts, pass/fail logic | [fusion/checkpoints-and-baselines.md](fusion/checkpoints-and-baselines.md) |
+| Tasks and their test data | [fusion/scenarios/tasks.md](fusion/scenarios/tasks.md) |
+| Test run execution: `run_status`, task and scenario statuses | [fusion/run-status/README.md](fusion/run-status/README.md) |
+| Test runs and run execution ids (`5X12`) | [fusion/run-status/test-runs.md](fusion/run-status/test-runs.md) |
+| Datastore (`#` references, values shared between tasks) | [fusion/run-status/datastore.md](fusion/run-status/datastore.md) |
+| Checkpoints, flags, statuses, baselines, Alerts | [fusion/run-status/checkpoints-and-baselines.md](fusion/run-status/checkpoints-and-baselines.md) |
 | MongoDB collections, fields, relationships | [fusion/database.md](fusion/database.md) |
 | How users create scenarios, test runs, tasks | [fusion/user-interactions.md](fusion/user-interactions.md) |
 | Fusion overview and high-level flow | [fusion/README.md](fusion/README.md) |

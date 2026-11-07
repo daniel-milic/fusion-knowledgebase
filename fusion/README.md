@@ -20,16 +20,14 @@ Target platform page / wizard / API / flow
 | Test automation task | Fusion MongoDB (`task_def`) | Executable unit; holds its test data, actions and checkpoints |
 | Datastore | `run_status` document | Runtime values shared between a scenario's tasks, referenced as `#name` |
 | Checkpoint | Within task | Verifies a result; type data or image |
-| Test run | Fusion MongoDB (`test_runs`, `run_status`) | A selection of scenarios and their tasks |
+| Test run | Fusion MongoDB (`test_runs`, `run_status`) | A selection of scenarios and their tasks; each execution has an id like `5X12` |
 | Baseline | Fusion MongoDB (`baseline`); images in Azure file share | One document per scenario holding each checkpoint's expected result |
 | Python script | fusion-scripts repo | Interacts with a page or API |
 | Custom Python framework | fusion-scripts repo | Shared patterns and helpers |
 
-## Files in this folder
-- [scenarios/](scenarios/) — scenario index and one file per scenario
-- [tasks.md](tasks.md) — tasks and the data they hold
-- [datastore.md](datastore.md) — runtime values shared between tasks in a scenario
-- [checkpoints-and-baselines.md](checkpoints-and-baselines.md) — verifying results and baselining
-- [database.md](database.md) — collections, fields, relationships
+## Contents
+- [scenarios/](scenarios/) — scenario definitions: scenario index, one file per scenario, and [tasks](scenarios/tasks.md)
+- [run-status/](run-status/) — test run execution: `test_runs`, `run_status` (scenario, datastore, checkpoints, tasks), statuses, and baselines
+- [database.md](database.md) — map of the collections and their relationships
 - [user-interactions.md](user-interactions.md) — creating scenarios, test runs, tasks
 - [scripts-repo.md](scripts-repo.md) — fusion-scripts structure and patterns

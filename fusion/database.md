@@ -1,36 +1,21 @@
 # Fusion Database (MongoDB)
 
-## Collections
-| Collection | Holds |
-|---|---|
-| `scenarios` | Scenario definitions |
-| `task_def` | Task definitions |
-| `test_runs` | Test runs |
-| `run_status` | One document per scenario in a run: its tasks, datasets, checkpoints and their actual results |
-| `baseline` | One document per scenario (`sid`) holding the expected result and status of each checkpoint |
+Map of the collections. Detail is in the folder for each.
 
-## run_status document
-Created for each scenario selected when a test run is created.
-- Scenario fields
-- Tasks list, with each task's datasets, ordered
-- Datastore dict: runtime values saved as `#reference = value` (see [datastore.md](datastore.md))
-- Checkpoints dict: for each checkpoint (by `tid` and name), value and status. A value of `Fail` or `Blocked` is a flag (not a status) and means look up the baseline
-- Task status: `queued`, `allocated`, `executing`, `stopped`, `completed` (a task is set to `stopped` when a `Blocked` checkpoint fails)
-- Scenario status for that `sid`, determined by the sum of all checkpoints across all tasks (see [checkpoints-and-baselines.md](checkpoints-and-baselines.md))
-
-The checkpoint values and statuses in `run_status` are the run's actual results. They are compared with `baseline`.
-
-## baseline document
-One per scenario, found by `sid`. A separate collection for now; planned to move into the scenario document.
-- `checkpoints / <tid> / <checkpoint name> / expected` — the expected result
-- status — `PASS` or `FAIL`, as decided by a tester
+| Collection | Holds | Detail |
+|---|---|---|
+| `scenarios` | Scenario definitions | [scenarios/](scenarios/) |
+| `task_def` | Task definitions | [scenarios/tasks.md](scenarios/tasks.md) |
+| `test_runs` | All test runs | [run-status/test-runs.md](run-status/test-runs.md) |
+| `run_status` | Per-scenario execution record: scenario, datastore, checkpoints, tasks | [run-status/](run-status/) |
+| `baseline` | Expected results and baseline status per scenario | [run-status/checkpoints-and-baselines.md](run-status/checkpoints-and-baselines.md) |
 
 ## Relationships
 - Scenario → task → script
 - Test run → selected scenarios → one `run_status` document each
+- `run_status` checkpoints are compared with `baseline` by `sid`, `tid` and checkpoint name
 - `sid` and `tid` are the MongoDB `_id` as hex text
 - Baseline images are stored in an Azure file share, not in MongoDB
 
 ## To document
-- Fields of `scenarios`, `task_def` and `test_runs`
-- Exact field names of `baseline` and `run_status` (sample documents to come)
+- Fields of `scenarios`, `task_def`, `test_runs`, `run_status` and `baseline` (sample documents to come)

@@ -11,6 +11,6 @@ A datastore is a dict on a scenario's `run_status` document. It holds values cre
 2. Task 2 creates an account, retrieving the client id from the datastore.
 3. The create-account API response returns the account number, and the task saves it as `#acc1`.
 4. In the member portal landing-page script, the checkpoint `Verify Account Number` has the value `#acc1`. The script reads the account number from the page and compares it with `#acc1`.
-5. If they match, `run_status` sets `checkpoints / <tid> / Verify Account Number / status` to pass.
+5. If they match, `run_status` sets `checkpoints / <tid> / Verify Account Number / status` to `PASS`.
 
 See [checkpoints-and-baselines.md](checkpoints-and-baselines.md) for checkpoint values.
