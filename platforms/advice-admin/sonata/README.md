@@ -1,7 +1,7 @@
 # Sonata Registry & APIs
 
 ## Purpose
-Primary registry for member accounts and products.
+Central registry (Bravura product) for super members, employers, their accounts, and insurance. All platforms connect to it.
 
 ## Users
 Internal

@@ -1,7 +1,7 @@
 # Member Portal
 
 ## Purpose
-Core member-facing web experience.
+Core member-facing web experience, built as a Sonata web app.
 
 ## Users
 Members
@@ -16,8 +16,7 @@ Members
 *(to document)*
 
 ## Integrations
-- Experience Layer APIs
-- Sonata Registry / APIs
+- Sonata (directly; it is a Sonata web app)
 - Boomi
 
 ## Test data
