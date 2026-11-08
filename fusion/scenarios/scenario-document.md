@@ -53,7 +53,7 @@ Stream is usually the platform name. Stream and test set are both abbreviated, e
 The sample's `AA-INS--MP-S07` has an extra hyphen and does not follow the convention.
 
 ## Example shape
-`AA-INS--MP-S07` has 29 tasks. The first tasks use Sonata APIs to create the conditions (create client, create account, cash receipt, contribution). Later tasks add insurance and a claim in Sonata, the Member Portal and Sonata Orchestrator, and the last task is an Account Enquiry that verifies the result.
+`AA-INS--MP-S07` has 26 tasks. The first tasks use Sonata APIs to create the conditions (create client, create account, cash receipt, contribution). Later tasks add insurance and a claim in Sonata, the Member Portal and Sonata Orchestrator, and the last task is an Account Enquiry that verifies the result.
 
 ## To document
 - Meaning of `date`, `next-row-id`, `scenario-idx` and `wsdl`

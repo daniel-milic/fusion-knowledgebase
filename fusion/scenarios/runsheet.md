@@ -7,6 +7,7 @@ New scenarios and new tasks get a `sid` and `tid` from the backend, so they go t
 
 | Change | Route | Script |
 |---|---|---|
+| Read a scenario and its task definitions before changing it | Database read only | `management/scripts/fusion/get_scenario.py <sid>` |
 | Create a new scenario | Backend API (assigns the `sid` and every `tid`) | *(to document)* |
 | Add a task to an existing scenario | Backend API (assigns the `tid`) | *(to document)* |
 | Change values in an existing task (field values, `run`, and so on) | Update the scenario document directly | *(to document)* |
@@ -15,10 +16,12 @@ Each operation has its own script. All are run on the Dev VM.
 
 ## Before any change
 1. Read the files listed under Key references in `AGENTS.md`.
-2. For each task, choose the task definition (`tdid`) and check its `process` is a real `<domain>.<platform>.<page>` with a script at `fusion-scripts/regression/<domain>/<platform>/<page>/run_job.py` ([../scripts-repo.md](../scripts-repo.md)).
-3. Check each field `id` exists in the task definition, and set values using the rules in [tasks.md](tasks.md). Leave out fields you want to be absent; use `''` to override a default so the script ignores the field.
-4. Keep the scenario end to end: early tasks create the data, later tasks act and verify ([README.md](README.md)).
-5. Check `reference` is unique and follows the convention in [scenario-document.md](scenario-document.md).
+2. **Existing scenario:** retrieve it. With `CONNECTION_STRING` set and `database_connector.py` available, run `python management/scripts/fusion/get_scenario.py <sid>`. It writes `<sid>.json` (the scenario) and `tdids.json` (the task definition for every `tdid` in its tasks). Work from these files.
+3. For each task, check its `process` is a real `<domain>.<platform>.<page>` with a script at `fusion-scripts/regression/<domain>/<platform>/<page>/run_job.py` ([../scripts-repo.md](../scripts-repo.md)).
+4. For each task, check every field `id` exists in the task definition in `tdids.json`. If it does not, remove that field from the scenario task.
+5. Check values using the rules in [tasks.md](tasks.md). Leave out fields you want to be absent; use `''` to override a default so the script ignores the field.
+6. Keep the scenario end to end: early tasks create the data, later tasks act and verify ([README.md](README.md)).
+7. Check `reference` is unique against every existing reference, and follows the convention in [scenario-document.md](scenario-document.md).
 
 ## Create a new scenario
 1. Prepare the scenario content: root fields and the ordered tasks (`tdid`, `process`, `menu`, `description`, `fields`). Do not set `_id` or `tid`, because the backend assigns them (confirm what the script expects).
@@ -49,6 +52,8 @@ To stop a task running without removing it, set `run` to `unchecked` (a value ch
 - Do not change other collections (`task_def`, `test_runs`, `run_status`, `baseline`) unless a scenario change requires it.
 
 ## To document
-- The name, location and arguments of each script, and the input format each expects
+- A script to list every scenario `reference`, for the uniqueness check
+- How to get the task definitions when creating a new scenario (`get_scenario.py` starts from an existing `sid`)
+- The name, location and arguments of the create, add-task and update scripts, and the input format each expects
 - Whether removing or reordering tasks, deleting a scenario, and changing root fields (for example `description` or `reference`) go through the API or a direct update
 - How to confirm a change worked beyond checking Fusion web
