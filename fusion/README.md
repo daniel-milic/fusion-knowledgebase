@@ -26,8 +26,8 @@ Target platform page / wizard / API / flow
 | Custom Python framework | fusion-scripts repo | Shared patterns and helpers |
 
 ## Contents
-- [scenarios/](scenarios/) — scenario definitions: scenario index, one file per scenario, and [tasks](scenarios/tasks.md)
-- [run-status/](run-status/) — test run execution: `test_runs`, `run_status` (scenario, datastore, checkpoints, tasks), statuses, and baselines
+- [scenarios/](scenarios/) — scenario definitions: index, [scenario JSON](scenarios/scenario-document.md), and [tasks and task definitions](scenarios/tasks.md)
+- [run-status/](run-status/) — test run execution: `test_runs`, `run_status` (scenario, datastore, checkpoints, tasks), statuses, [job.json](run-status/job-json.md), and baselines
 - [database.md](database.md) — map of the collections and their relationships
 - [user-interactions.md](user-interactions.md) — creating scenarios, test runs, tasks
 - [scripts-repo.md](scripts-repo.md) — fusion-scripts structure and patterns

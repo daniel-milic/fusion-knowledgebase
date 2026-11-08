@@ -6,7 +6,9 @@ Entry point for AI navigation. Find the row that matches the request, open that 
 |---|---|
 | Which platforms exist, by domain | [PLATFORMS.md](PLATFORMS.md) |
 | A test scenario: what it covers and which platforms it touches | [fusion/scenarios/README.md](fusion/scenarios/README.md) |
-| Tasks and their test data | [fusion/scenarios/tasks.md](fusion/scenarios/tasks.md) |
+| Scenario JSON: root fields and the tasks list | [fusion/scenarios/scenario-document.md](fusion/scenarios/scenario-document.md) |
+| Task definitions (`task_def`), field values and overrides | [fusion/scenarios/tasks.md](fusion/scenarios/tasks.md) |
+| `job.json`: how a task becomes a script run | [fusion/run-status/job-json.md](fusion/run-status/job-json.md) |
 | Test run execution: `run_status`, task and scenario statuses | [fusion/run-status/README.md](fusion/run-status/README.md) |
 | Test runs and run execution ids (`5X12`) | [fusion/run-status/test-runs.md](fusion/run-status/test-runs.md) |
 | Datastore (`#` references, values shared between tasks) | [fusion/run-status/datastore.md](fusion/run-status/datastore.md) |
@@ -14,7 +16,7 @@ Entry point for AI navigation. Find the row that matches the request, open that 
 | MongoDB collections, fields, relationships | [fusion/database.md](fusion/database.md) |
 | How users create scenarios, test runs, tasks | [fusion/user-interactions.md](fusion/user-interactions.md) |
 | Fusion overview and high-level flow | [fusion/README.md](fusion/README.md) |
-| The fusion-scripts repo: layout, patterns, where a script goes | [fusion/scripts-repo.md](fusion/scripts-repo.md) |
+| The fusion-scripts repo: `process` path to script, patterns | [fusion/scripts-repo.md](fusion/scripts-repo.md) |
 | A platform (business rules, timings, integrations) | `platforms/<domain>/<platform>/README.md` |
 | A page, wizard or API on a platform | `platforms/<domain>/<platform>/<page>.md` |
 | This knowledge base: layout, depth, size rules, skills, collection scripts | [management/README.md](management/README.md) |

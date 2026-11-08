@@ -2,8 +2,8 @@
 
 ## Layout
 - Top level holds AGENTS, INDEX, README, PLATFORMS, `platforms/`, `fusion/` and `management/` only.
-- Domain folders live under `platforms/` and mirror `fusion-scripts/regression/<domain>/`.
-- Platform folders (`platforms/<domain>/<platform>/`) mirror `fusion-scripts/regression/<domain>/<platform>/`.
+- Domain folders live under `platforms/`: `platforms/<domain>/<platform>/`.
+- Platform folders follow the script paths in `fusion-scripts/regression/` as closely as possible (see `fusion/scripts-repo.md`; the mapping is still to be confirmed).
 - Page and API docs sit in the platform folder, named after the script path, so the doc path can be worked out from the script path.
 - One concern per file. Create a file only when it holds real content.
 - Every platform README uses the same headings (see `templates/`).

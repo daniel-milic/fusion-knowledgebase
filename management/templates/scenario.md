@@ -11,6 +11,6 @@ First tasks create test conditions; last tasks act and verify.
 
 | Task | Script |
 |---|---|
-| | `fusion-scripts/regression/<domain>/<platform>/<page>` |
+| | `fusion-scripts/regression/<process path>/run_job.py` |
 
 ## Coverage gaps

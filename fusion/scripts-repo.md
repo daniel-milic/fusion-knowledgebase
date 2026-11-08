@@ -3,7 +3,18 @@
 Structure and conventions of the automation repo that Fusion tasks drive.
 
 ## Layout
-Scripts sit under `regression/<domain>/<platform>/<page>`, matching the domain and platform folders in this knowledge base.
+## Process path to script
+A task's `process` field is a dot path to its script. Replace the dots with slashes, put it under `regression/`, and add `run_job.py`:
+
+| `process` | Script |
+|---|---|
+| `sonata.sbs.api-service` | `regression/sonata/sbs/api-service/run_job.py` |
+| `digital.microsites.register` | `regression/digital/microsites/register/run_job.py` |
+| `digital.member-portal.insurance.claims` | `regression/digital/member-portal/insurance/claims/run_job.py` |
+
+The path is 3 or 4 levels deep. The first levels seen are `sonata` and `digital`. `run_job.py` reads the task's `job.json` ([run-status/job-json.md](run-status/job-json.md)).
+
+Platform docs in this knowledge base follow these paths as closely as possible. Registry processes start with `sonata`, while the knowledge base groups Sonata under `platforms/advice-admin/sonata/`; how the two map is still to be confirmed.
 
 ## Framework patterns
 - Page object / component patterns
