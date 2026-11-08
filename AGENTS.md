@@ -17,6 +17,8 @@ Each scenario is represented by:
 The Markdown file must include: purpose, platforms touched, ordered tasks (with script path references), and any coverage gaps.
 
 ## Creating or updating scenarios
+Follow `fusion/scenarios/runsheet.md`. New scenarios and new tasks are created through the backend API, which assigns the `sid` and `tid`. Only value changes to existing tasks update the scenario document directly.
+
 1. Propose or edit the scenario JSON and its accompanying `.md` file under `fusion/scenarios/`.
 2. Ensure each task's `process` field is the correct dot path `<domain>.<platform>.<page>`; its script is `fusion-scripts/regression/<domain>/<platform>/<page>/run_job.py` (see `fusion/scripts-repo.md`).
 3. Keep the scenario as an end-to-end flow: early tasks set up test conditions and data; later tasks perform actions and verify outcomes.
@@ -29,6 +31,7 @@ All database updates must be applied on the Dev VM by running the designated upd
 Start at `INDEX.md` to find the right file before reading anything else. For scenario work, always read:
 - `fusion/scenarios/README.md` and `management/templates/scenario.md` — scenario conventions
 - `fusion/scenarios/scenario-document.md` and `fusion/scenarios/tasks.md` — scenario JSON, task definitions and how field values are resolved
+- `fusion/scenarios/runsheet.md` — create, update and maintain procedure
 - `fusion/scripts-repo.md` — script mappings and patterns
 
 ## Constraints

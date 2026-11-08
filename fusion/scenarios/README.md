@@ -7,7 +7,7 @@ A scenario is a sequence of tasks:
 1. **First tasks** create the test conditions (test data).
 2. **Last tasks** perform the actions and check the results (verify outcome).
 
-See [tasks.md](tasks.md); each task can create data, act, and verify.
+See [tasks.md](tasks.md); each task can create data, act, and verify. To create or change scenarios, follow [runsheet.md](runsheet.md).
 
 This folder holds definitions (`scenarios` and `task_def` collections). What happens when they are run, including statuses, is in [../run-status/](../run-status/).
 

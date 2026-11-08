@@ -6,6 +6,7 @@ Entry point for AI navigation. Find the row that matches the request, open that 
 |---|---|
 | Which platforms exist, by domain | [PLATFORMS.md](PLATFORMS.md) |
 | A test scenario: what it covers and which platforms it touches | [fusion/scenarios/README.md](fusion/scenarios/README.md) |
+| Create, update or maintain a scenario (runsheet) | [fusion/scenarios/runsheet.md](fusion/scenarios/runsheet.md) |
 | Scenario JSON: root fields and the tasks list | [fusion/scenarios/scenario-document.md](fusion/scenarios/scenario-document.md) |
 | Task definitions (`task_def`), field values and overrides | [fusion/scenarios/tasks.md](fusion/scenarios/tasks.md) |
 | `job.json`: how a task becomes a script run | [fusion/run-status/job-json.md](fusion/run-status/job-json.md) |
