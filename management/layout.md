@@ -1,7 +1,7 @@
 # Layout, Depth and Size Rules
 
 ## Layout
-- Top level holds INDEX, README, PLATFORMS, `platforms/`, `fusion/` and `management/` only.
+- Top level holds AGENTS, INDEX, README, PLATFORMS, `platforms/`, `fusion/` and `management/` only.
 - Domain folders live under `platforms/` and mirror `fusion-scripts/regression/<domain>/`.
 - Platform folders (`platforms/<domain>/<platform>/`) mirror `fusion-scripts/regression/<domain>/<platform>/`.
 - Page and API docs sit in the platform folder, named after the script path, so the doc path can be worked out from the script path.
