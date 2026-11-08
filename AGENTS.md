@@ -26,12 +26,9 @@ The Markdown file must include: purpose, platforms touched, ordered tasks (with 
 All database updates must be applied on the Dev VM by running the designated update/apply script (provided separately). After the script runs successfully, regenerate the scenarios index if needed using the scripts under `management/scripts/fusion/`.
 
 ## Key references
-- Entry point: `INDEX.md`
-- Platforms list: `PLATFORMS.md`
-- Fusion overview and concepts: `fusion/README.md`
-- Scenario conventions: `fusion/scenarios/README.md` and `management/templates/scenario.md`
-- Script mappings and patterns: `fusion/scripts-repo.md`
-- Layout and depth rules: `management/layout.md`
+Start at `INDEX.md` to find the right file before reading anything else. For scenario work, always read:
+- `fusion/scenarios/README.md` and `management/templates/scenario.md` — scenario conventions
+- `fusion/scripts-repo.md` — script mappings and patterns
 
 ## Constraints
 - Stay within documented platform behaviour, timings, integrations, and existing automation patterns.
