@@ -10,8 +10,8 @@ Usage:
     <sid>  the scenario's _id as hex text
 
 Environment:
-    CONNECTION_STRING  MongoDB / Cosmos DB connection string (required)
-    DATABASE_NAME      database name (optional, default: qaas)
+    DATABASE_CONNECTION_STRING  MongoDB / Cosmos DB connection string (required)
+    DATABASE_NAME               database name (optional, default: qaas)
 
 Writes to --out-dir (default: current folder):
     <sid>.json   the scenarios collection document
@@ -71,9 +71,9 @@ def main() -> int:
     parser.add_argument("--out-dir", default=".", help="folder for the output files (default: current folder)")
     args = parser.parse_args()
 
-    connection = os.environ.get("CONNECTION_STRING")
+    connection = os.environ.get("DATABASE_CONNECTION_STRING")
     if not connection:
-        print("ERROR: set the CONNECTION_STRING environment variable", file=sys.stderr)
+        print("ERROR: set the DATABASE_CONNECTION_STRING environment variable", file=sys.stderr)
         return 1
     if not ObjectId.is_valid(args.sid):
         print(f"ERROR: {args.sid} is not a valid sid", file=sys.stderr)

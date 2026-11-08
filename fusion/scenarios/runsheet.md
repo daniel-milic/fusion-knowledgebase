@@ -16,7 +16,7 @@ Each operation has its own script. All are run on the Dev VM.
 
 ## Before any change
 1. Read the files listed under Key references in `AGENTS.md`.
-2. **Existing scenario:** retrieve it. With `CONNECTION_STRING` set and `database_connector.py` available, run `python management/scripts/fusion/get_scenario.py <sid>`. It writes `<sid>.json` (the scenario) and `tdids.json` (the task definition for every `tdid` in its tasks). Work from these files.
+2. **Existing scenario:** retrieve it. With `DATABASE_CONNECTION_STRING` set and `database_connector.py` available, run `python management/scripts/fusion/get_scenario.py <sid>`. It writes `<sid>.json` (the scenario) and `tdids.json` (the task definition for every `tdid` in its tasks). Work from these files.
 3. For each task, check its `process` is a real `<domain>.<platform>.<page>` with a script at `fusion-scripts/regression/<domain>/<platform>/<page>/run_job.py` ([../scripts-repo.md](../scripts-repo.md)).
 4. For each task, check every field `id` exists in the task definition in `tdids.json`. If it does not, remove that field from the scenario task.
 5. Check values using the rules in [tasks.md](tasks.md). Leave out fields you want to be absent; use `''` to override a default so the script ignores the field.
