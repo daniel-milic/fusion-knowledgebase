@@ -10,7 +10,7 @@ Each execution of a run has an id in the form `<run number>X<execution index>`.
 
 Example: `5X12` is execution 12 of run 5.
 
-In a task's `job.json` the id also carries the scenario: `<run>X<execution>S<scenario_idx>`, e.g. `28X190S24142` ([job-json.md](job-json.md)).
+In a task's `job.json` the id also carries the scenario id: `<run>X<execution>S<scenario_idx>`, e.g. `28X190S24142` ([job-json.md](job-json.md)).
 
 ## To document
 - Fields of `test_runs` (sample documents to come)

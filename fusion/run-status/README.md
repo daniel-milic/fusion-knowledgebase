@@ -14,7 +14,7 @@ Created for each scenario selected when a test run is created. It contains:
 - **scenario:** the scenario fields and the scenario status
 - **datastore:** runtime values shared between tasks, saved as `#reference = value` ([datastore.md](datastore.md))
 - **checkpoints:** a dict by `tid` and checkpoint name, with value and status ([checkpoints-and-baselines.md](checkpoints-and-baselines.md))
-- **tasks:** the ordered task list with each task's datasets, and the task status
+- **tasks:** the ordered task list with each task's datasets, and the task status. Tasks with `run: unchecked` in the scenario are not added
 
 The checkpoint values and statuses here are the run's actual results.
 

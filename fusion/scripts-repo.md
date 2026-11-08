@@ -29,6 +29,7 @@ Platform docs in this knowledge base use the same names: `platforms/<domain>/<pl
 - Page object / component patterns
 - API client patterns (Sonata, Experience Layer, Boomi)
 - Reading task data
+- Value transformation (`transformer.py`; forms in [scenarios/tasks.md](scenarios/tasks.md))
 - Test data builders
 - Assertions and verification helpers
 - Logging, reporting, and evidence capture

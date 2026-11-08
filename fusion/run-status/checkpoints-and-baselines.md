@@ -19,14 +19,16 @@ Checkpoints are held in the `checkpoints` dict of the `run_status` document, by 
 - `ALERT` (checkpoint): the value or image does not match the baseline's expected data or image; needs review.
 
 ## Flags
-`Fail` and `Blocked` are flags, not statuses. (Some checkpoints also allow an `Info` flag; its effect is still to be documented.) Every checkpoint has one. A checkpoint that does not match is set to status `FAIL`; the flag decides what that does to the task and scenario:
+`Fail` and `Blocked` are flags, not statuses. Every checkpoint has one. A checkpoint that does not match is set to status `FAIL`; the flag decides what that does to the task and scenario:
 
 | Flag | Effect of a mismatch |
 |---|---|
 | `Fail` | Scenario status is `FAIL`. The scenario continues until all tasks are complete |
 | `Blocked` | Scenario status is `BLOCKED`. The task is set to `stopped` and the scenario does not continue |
 
-In a task definition a checkpoint is a field in group `Checkpoint`. The field `name` is what is checked and its `value` is the flag, chosen from the field's list (`Blocked`, `Fail`, and for some `Info`). In `job.json` it appears as `"Checkpoint": {"<name>": "<flag>"}`; for example, Create a Client has `Verify Request Sent` and `Verify Response Received`, both `Fail` ([job-json.md](job-json.md)).
+In a task definition a checkpoint is a field in group `Checkpoint`. The field `name` is what is checked and its `value` is the flag, chosen from the field's list (`Blocked`, `Fail`). In `job.json` it appears as `"Checkpoint": {"<name>": "<flag>"}`; for example, Create a Client has `Verify Request Sent` and `Verify Response Received`, both `Fail` ([job-json.md](job-json.md)).
+
+An `Info` flag still appears in some older task definitions. It is deprecated, because it does not affect the scenario status. Do not use it.
 
 ## Checkpoint values
 The value set on a checkpoint in a task decides how it is checked:
@@ -69,5 +71,4 @@ Baseline images are stored in an Azure file share.
 - Exact field names in the `baseline` and `run_status` documents (sample documents to come)
 - What a tester's pass/fail decision on an Alert changes (the baseline, or only that run)
 - How a checkpoint whose value is text, a regex or a datastore reference gets its flag (the sample task definition only shows flag lists)
-- The effect of the `Info` flag
 - What `TBT` means, and when a checkpoint or baseline has it

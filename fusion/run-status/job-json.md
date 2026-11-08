@@ -8,7 +8,7 @@ Example: `"process": "sonata.sbs.api-service"` runs `regression/sonata/sbs/api-s
 | Key | Meaning |
 |---|---|
 | `app` | Application, e.g. `Sonata SBS` |
-| `rx` | Run execution id for this scenario: `<run>X<execution>S<scenario_idx>`. `28X190S24142` is run 28, execution 190, scenario_idx 24142 |
+| `rx` | Run execution of this task: `<run>X<execution>S<scenario_idx>`. `28X190S24142` is run 28, execution 190, scenario S24142. The job needs this full form (see below) |
 | `sid`, `tid`, `tdid` | Scenario id, task id, task definition id (hex text) |
 | `job_id`, `task_idx` | Job number and the task's position in the scenario (`001` is first) |
 | `process`, `menu`, `description` | From the task |
@@ -21,6 +21,9 @@ Example: `"process": "sonata.sbs.api-service"` runs `regression/sonata/sbs/api-s
 | `Datastore` | The `Datastore` group: `{response field: #reference}` |
 | Ungrouped fields | At the top level, e.g. `"sbs-format": "json"` |
 | `agent`, `allocated-ts`, `allocated-time`, `completed`, `msg` | Who ran the task and when; `msg` was empty in the example |
+
+## The rx
+From Fusion's side the run execution is `28X190` ([test-runs.md](test-runs.md)). In a job the scenario id `S24142` is added, because the framework uses it to create unique given names and surnames for each run, so the data can be matched with expected values. The framework sometimes extracts the `28X190` part when it needs it.
 
 ## Example (Create a Client, shortened)
 ```json

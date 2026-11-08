@@ -8,6 +8,7 @@ Map of the collections. Detail is in the folder for each.
 | `task_def` | Task definitions | [scenarios/tasks.md](scenarios/tasks.md) |
 | `test_runs` | All test runs | [run-status/test-runs.md](run-status/test-runs.md) |
 | `run_status` | Per-scenario execution record: scenario, datastore, checkpoints, tasks | [run-status/](run-status/) |
+| config (exact name to confirm) | Reference data used in field values, e.g. type `employers` with dicts such as `Emp1` | [scenarios/tasks.md](scenarios/tasks.md) |
 | `baseline` | Expected results and baseline status per scenario | [run-status/checkpoints-and-baselines.md](run-status/checkpoints-and-baselines.md) |
 
 ## Relationships

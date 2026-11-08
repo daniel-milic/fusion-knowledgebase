@@ -38,7 +38,7 @@ One document per kind of task, e.g. Create a Client (`menu`: `clientService/crea
 | Group | `name` | `value` |
 |---|---|---|
 | `Request` | Input to the web page, Sonata page or API | The input value |
-| `Checkpoint` | What is checked | The flag: `Blocked` or `Fail`; some checkpoints also allow `Info` (see [../run-status/checkpoints-and-baselines.md](../run-status/checkpoints-and-baselines.md)) |
+| `Checkpoint` | What is checked | The flag: `Blocked` or `Fail` (the old `Info` flag is deprecated; see [../run-status/checkpoints-and-baselines.md](../run-status/checkpoints-and-baselines.md)) |
 | `Datastore` | A response field to keep, e.g. `client.id$int` | The `#reference` to save it under, e.g. `#client1` (see [../run-status/datastore.md](../run-status/datastore.md)) |
 
 ## Which value is used
@@ -51,17 +51,29 @@ The result, grouped by `group`, is the task's `job.json` ([../run-status/job-jso
 
 Example (Create a Client): the scenario sets field 11 (forename) to `#randomstr1`, which replaces the default `GN1`. Field 12 (second forename) has no value anywhere, so it is not provided.
 
-## Value forms seen in scenario fields
-| Form | Examples | Notes |
+## Empty and unchecked
+Because the scenario's value wins, a scenario can leave out a field that has a default by setting it to `''`.
+- `''`: the field is not in the job, so the script does not interact with it.
+- `unchecked`: the field is in the job, so the script makes sure the checkbox is unchecked.
+
+## Value transformation
+Field values pass through `transformer.py` in the framework before they reach `job.json`.
+
+| Form | Examples | Result |
 |---|---|---|
 | `#name` | `#randomstr1`, `#MOBILE`, `#client1`, `#acc1`, `#dob` | Datastore references or generated values. They stay as `#` tokens in `job.json` |
+| Relative date | `d-127`, `d-24`, `d-24:Friday` | `d-24` is 24 days before the Monday of this week. `:Friday` then moves it to the closest Friday |
+| `@name-key` | `@Emp1-number` | A reference to the config collection: type `employers`, dict `Emp1`, key `number`. The value is set in `job.json` |
 | Age | `44yo` | Becomes a date of birth in `job.json` (`1982-10-26`) |
-| Relative date | `d-127`, `d-24:Friday`, `today` | Meaning to confirm |
-| `@name` | `@Emp1-number` | Meaning to confirm |
-| Checkbox | `checked`, `unchecked` | |
+| Checkbox | `checked`, `unchecked` | See above |
+
+## Task entry keys: run, tranche, Handover
+- **`run`:** `checked` or `unchecked`. When a test run is created, the scenario dict in `run_status` gets the list of tasks. A task with `run: unchecked` is skipped and not added. The scenario page still shows it, so it can stay in the scenario for reference or be disabled.
+- **`tranche`:** there can be several versions of the same task definition, each only valid in a particular environment (for example, a major release that changes a product value, or merged Sonata data). The `tranche` value (e.g. `Tranche 2`) tells you which task definition version to add.
+- **`Handover`:** tasks run in order and are allocated to agents. `Handover: checked` tells the task manager to run the following task on the same agent (the following task has a `handover-to` flag). The agent keeps its session open until the next script launches. This is used when one task sets up a condition in a wizard and the next script continues it, because the flow can fork depending on the previous task.
+- **`Cluster`:** no framework reference has been found. It may be particular to one script.
 
 ## To document
-- Meaning of the `d-<n>`, `d-<n>:<weekday>` and `@name` forms
-- Why some scenario fields with a `Checkbox` list (ids 29, 34, 35, 38 in Create a Client) do not appear in that task's `job.json` `Request`, and why a field set to `''` is also absent
-- The effect of the `Info` flag
+- Why Create a Client fields set to `true` or `false` on `Checkbox` fields (ids 29, 34, 35, 38) are not in that job's `Request`
+- Name of the config collection and its other types
 - Environment differences (TEST, DEV, PPD)
