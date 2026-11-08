@@ -2,9 +2,18 @@
 
 Structure and conventions of the automation repo that Fusion tasks drive.
 
-## Layout
+## Domains
+The first level under `regression/` is the domain:
+
+| Domain | Covers |
+|---|---|
+| `digital` | Digital (member-facing) platforms |
+| `sonata` | Admin (the Sonata registry) |
+| `advice` | Advice platforms |
+| `investments` | Investments |
+
 ## Process path to script
-A task's `process` field is a dot path to its script. Replace the dots with slashes, put it under `regression/`, and add `run_job.py`:
+A task's `process` field is a dot path: `<domain>.<platform>.<page>`. Replace the dots with slashes, put it under `regression/`, and add `run_job.py`:
 
 | `process` | Script |
 |---|---|
@@ -12,9 +21,9 @@ A task's `process` field is a dot path to its script. Replace the dots with slas
 | `digital.microsites.register` | `regression/digital/microsites/register/run_job.py` |
 | `digital.member-portal.insurance.claims` | `regression/digital/member-portal/insurance/claims/run_job.py` |
 
-The path is 3 or 4 levels deep. The first levels seen are `sonata` and `digital`. `run_job.py` reads the task's `job.json` ([run-status/job-json.md](run-status/job-json.md)).
+The page part can be nested (`insurance/claims`). `run_job.py` reads the task's `job.json` ([run-status/job-json.md](run-status/job-json.md)).
 
-Platform docs in this knowledge base follow these paths as closely as possible. Registry processes start with `sonata`, while the knowledge base groups Sonata under `platforms/advice-admin/sonata/`; how the two map is still to be confirmed.
+Platform docs in this knowledge base use the same names: `platforms/<domain>/<platform>/`, with a page doc per page.
 
 ## Framework patterns
 - Page object / component patterns

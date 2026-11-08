@@ -29,7 +29,7 @@ Tasks are in execution order. Each entry:
 |---|---|
 | `tid` | Task id, hex text. Unique to this task entry |
 | `tdid` | `_id` of the task definition in `task_def` |
-| `process` | Dot path to the script, e.g. `sonata.sbs.api-service` (see [../scripts-repo.md](../scripts-repo.md)) |
+| `process` | Dot path to the script, e.g. `sonata.sbs.api-service` `<domain>.<platform>.<page>` (see [../scripts-repo.md](../scripts-repo.md)) |
 | `menu` | The page or API operation, e.g. `rest/sbs/clientService/createClient` or `Insurance Menu / Claims / Claim Notification` |
 | `description` | Short label for the task (not on every task) |
 | `fields` | List of `{id, value}`. `id` is the field id in the task definition. Overrides the definition's default (see [tasks.md](tasks.md)) |

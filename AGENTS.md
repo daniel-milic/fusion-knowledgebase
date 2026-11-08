@@ -6,7 +6,7 @@ This knowledge base provides the context required for GitHub Copilot (in VS Code
 ## Scope
 - Work is limited to the Fusion MongoDB `scenarios` collection (and related task definitions).
 - Do not modify other collections (`task_def`, `test_runs`, `run_status`, `baseline`, etc.) unless explicitly required for a scenario change.
-- Platform documentation lives under `platforms/<domain>/<platform>/` and follows the script paths in `fusion-scripts/regression/` (see `fusion/scripts-repo.md`).
+- Platform documentation lives under `platforms/<domain>/<platform>/` and mirrors the structure of `fusion-scripts/regression/<domain>/<platform>/`. The domains are `digital`, `sonata` (admin), `advice` and `investments`.
 - Scenario documentation lives under `fusion/scenarios/`.
 
 ## Scenario structure
@@ -18,7 +18,7 @@ The Markdown file must include: purpose, platforms touched, ordered tasks (with 
 
 ## Creating or updating scenarios
 1. Propose or edit the scenario JSON and its accompanying `.md` file under `fusion/scenarios/`.
-2. Ensure each task's `process` field is the correct dot path for its script (the script is `fusion-scripts/regression/<process path>/run_job.py`; see `fusion/scripts-repo.md`).
+2. Ensure each task's `process` field is the correct dot path `<domain>.<platform>.<page>`; its script is `fusion-scripts/regression/<domain>/<platform>/<page>/run_job.py` (see `fusion/scripts-repo.md`).
 3. Keep the scenario as an end-to-end flow: early tasks set up test conditions and data; later tasks perform actions and verify outcomes.
 4. Do not write directly to the Fusion MongoDB database from this knowledge base or from Copilot.
 

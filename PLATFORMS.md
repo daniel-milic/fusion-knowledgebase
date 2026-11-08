@@ -11,7 +11,10 @@ The single list of platforms. Detail lives in `platforms/<domain>/<platform>/`. 
 ## Test environments
 TEST01, TEST02, TEST03, TEST04, DEV01, DEV04, PPD01, PPD02
 
-## digital — member-facing, all with automation coverage
+## Domains
+The domain names match `fusion-scripts/regression/<domain>/`: `digital`, `sonata` (admin), `advice` and `investments`.
+
+### digital — member-facing, all with automation coverage
 | Platform | Built as | Connects via |
 |---|---|---|
 | Member Portal — [platforms/digital/member-portal/](platforms/digital/member-portal/) | Sonata web app | Sonata |
@@ -22,26 +25,31 @@ TEST01, TEST02, TEST03, TEST04, DEV01, DEV04, PPD01, PPD02
 | Advisor Portal | *(to document)* | *(to document)* |
 | TAL Insurance | *(to document)* | *(to document)* |
 
-## advice-admin
+### sonata — admin
 | Platform | Notes |
 |---|---|
-| Sonata Registry and APIs — [platforms/advice-admin/sonata/](platforms/advice-admin/sonata/) | Bravura product. Central registry |
-| Sonata ODS DB | Operational data store |
-| eCRM — [platforms/advice-admin/ecrm/](platforms/advice-admin/ecrm/) | Clients, mostly advisor-facing |
-| AdviceOS — [platforms/advice-admin/adviceos/](platforms/advice-admin/adviceos/) | Bravura product. Financial advice |
-| Zendesk | Service desk |
-| Quadient | Letter generation |
+| Sonata Registry and APIs — [platforms/sonata/](platforms/sonata/) | Bravura product. Central registry. Platforms seen in scripts: `sbs`, `insurance`, `orchestrator`, `employer-services`, `system` |
 
-## integration
+### advice
+| Platform | Notes |
+|---|---|
+| eCRM — [platforms/advice/ecrm/](platforms/advice/ecrm/) | Clients, mostly advisor-facing |
+| AdviceOS — [platforms/advice/adviceos/](platforms/advice/adviceos/) | Bravura product. Financial advice |
+
+### investments
+No platforms documented yet.
+
+## Not yet assigned to a domain
+Sonata ODS DB (operational data store), Zendesk (service desk), Quadient (letter generation).
+
+## Outside the regression domains
 | Platform | Notes |
 |---|---|
 | Boomi | Centralised APIs. Integrates to all platforms |
 | Experience API | Above Boomi, for the in-house digital channels |
 | Babel (SuperStream gateway) | Bravura product. No test coverage at present |
 | ATO gateway | No test coverage at present |
-
-## data-ai — no automation coverage
-Data platforms, AI / ML services.
+| Data platforms, AI / ML services | No automation coverage |
 
 ## Integration paths
 - In-house digital channels → Experience API → Boomi → Sonata and other platforms

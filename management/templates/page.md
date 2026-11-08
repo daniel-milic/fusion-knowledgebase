@@ -7,5 +7,5 @@
 ## Downstream calls
 ## Timings
 ## Automation
-- Script: `fusion-scripts/regression/<process path>/run_job.py`
+- Script: `fusion-scripts/regression/<domain>/<platform>/<page>/run_job.py`
 - Linked tasks:
